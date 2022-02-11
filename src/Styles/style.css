@@ -32,6 +32,7 @@
       -ms-flex-direction: row;
           flex-direction: row;
   gap: 40px;
+  margin-top: 30px;
 }
 
 .simulator {
@@ -54,7 +55,6 @@
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 25px;
-  width: 100%;
   gap: 40px;
 }
 
@@ -83,6 +83,7 @@
 .simulator .box-simulator .option-box-1 input:checked + label, .simulator .box-simulator .option-box-2 input:checked + label {
   background-color: #ED8E53;
   color: white;
+  width: 80%;
 }
 
 .simulator .box-simulator .option-box-1 input:checked + label::before, .simulator .box-simulator .option-box-2 input:checked + label::before {
@@ -105,7 +106,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
+  width: 4vw;
   height: 45px;
   border: 1px solid black;
   cursor: pointer;
@@ -137,6 +138,10 @@
   border-bottom-right-radius: 5px;
 }
 
+.simulator .box-simulator .col-1 {
+  width: 13vw;
+}
+
 .simulator .box-simulator .col-1 input[type="number"] {
   margin-bottom: 10px;
   border: none;
@@ -144,6 +149,7 @@
   background-color: transparent;
   height: 40px;
   display: block;
+  width: 100%;
 }
 
 .simulator .box-simulator .col-1 input[type="number"]::-webkit-input-placeholder {
@@ -166,6 +172,10 @@
   padding: 0px;
 }
 
+.simulator .box-simulator .col-2 {
+  width: 13vw;
+}
+
 .simulator .box-simulator .col-2 input[type="number"] {
   margin-bottom: 10px;
   border: none;
@@ -173,6 +183,7 @@
   background-color: transparent;
   height: 40px;
   display: block;
+  width: 100%;
 }
 
 .simulator input[type=number]::-webkit-inner-spin-button {
@@ -232,6 +243,58 @@
 }
 
 .Resultados {
-  width: 50%;
+  width: 40vw;
+  border-radius: 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.Resultados .cards {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.Resultados .cards .card {
+  background-color: #f0f0f0;
+  width: 200px;
+  height: 90px;
+  -webkit-box-shadow: 1px 1px 8px black;
+          box-shadow: 1px 1px 8px black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+}
+
+.Resultados .cards .card h2 {
+  font-size: 18px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -21,6 +21,7 @@ $secondary-color: rgb(240, 240, 240);
     display: flex;
     flex-direction: row;
     gap: 40px;
+    margin-top: 30px;
     }
 
 }
@@ -37,8 +38,8 @@ $secondary-color: rgb(240, 240, 240);
     .box-simulator{
         display: flex;
         margin-bottom: 25px;
-        width: 100%;
         gap: 40px;
+        
 
         .label-rendimento{
             display: flex;
@@ -54,6 +55,7 @@ $secondary-color: rgb(240, 240, 240);
                 &:checked + label{
                     background-color: $primary-color;
                     color: white;
+                    width: 80%;
                 }
 
                 &:checked + label::before{
@@ -71,7 +73,7 @@ $secondary-color: rgb(240, 240, 240);
                 flex-direction: row;
                 justify-content: center;
                 align-items: center;
-                width: 100%;
+                width: 4vw;
                 height: 45px;
                 border: 1px solid black;
                 cursor: pointer;
@@ -108,6 +110,7 @@ $secondary-color: rgb(240, 240, 240);
         }
 
         .col-1{
+            width: 13vw;
             input[type="number"]{
                 margin-bottom: 10px;
                 border: none;
@@ -116,6 +119,7 @@ $secondary-color: rgb(240, 240, 240);
                 // padding: 10px;
                 height: 40px;
                 display: block;
+                width: 100%;
 
                 &::placeholder{
                     margin: 0px;
@@ -125,6 +129,7 @@ $secondary-color: rgb(240, 240, 240);
         }
 
         .col-2{
+            width: 13vw;
             input[type="number"]{
                 margin-bottom: 10px;
                 border: none;
@@ -132,6 +137,7 @@ $secondary-color: rgb(240, 240, 240);
                 background-color: transparent;
                 height: 40px;
                 display: block;
+                width: 100%;
             }
         }
 
@@ -190,5 +196,38 @@ $secondary-color: rgb(240, 240, 240);
 }
 
 .Resultados{
-    width: 50%;
+    width: 40vw;
+    border-radius: 10px;
+    box-sizing: border-box;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+
+    .cards{
+        margin-top: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+
+        .card{
+            background-color: $secondary-color;
+            width: 200px;
+            height: 90px;
+            box-shadow: 1px 1px 8px black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+
+            h2{
+                font-size: 18px;
+            }
+
+        }
+
+    }
+
+
 }

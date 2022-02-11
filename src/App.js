@@ -16,10 +16,10 @@ function App() {
                 <GrCircleInformation />
               </div>
               <div className="option-box-1">
-                <input type="radio" name="question-1" value="bruto" id="bruto" checked/>
+                <input type="radio" name="question-1" value="bruto" id="bruto" checked />
                 <label for="bruto" id="bru">Bruto</label>
-                <input type="radio" name="question-1" value="liquido" id="liquido"/>
-                <label for="liquido" id="liq">Liquido</label>
+                <input type="radio" name="question-1" value="liquido" id="liquido" />
+                <label for="liquido" id="liq">Líquido</label>
               </div>
               <label for="aporte-inicial">Aporte Inicial</label>
               <input type="number" name="aporte-inicial" placeholder="R$ 0,00" />
@@ -34,11 +34,11 @@ function App() {
                 <GrCircleInformation />
               </div>
               <div className="option-box-2">
-                <input type="radio" name="question-2" value="pre" id="pre"/>
+                <input type="radio" name="question-2" value="pre" id="pre" />
                 <label for="pre" id="pr">Pré</label>
-                <input type="radio" name="question-2" value="pos" id="pos" checked/>
+                <input type="radio" name="question-2" value="pos" id="pos" checked />
                 <label for="pos" id="po">Pós</label>
-                <input type="radio" name="question-2" value="fixado" id="fixado"/>
+                <input type="radio" name="question-2" value="fixado" id="fixado" />
                 <label for="fixado" id="fix">Fixado</label>
               </div>
               <label for="aporte-mensal">Aporte Mensal</label>
@@ -57,6 +57,22 @@ function App() {
 
         <div className="Resultados">
           <h1>Resultados da Simulação</h1>
+          <div className="cards">
+            <div className="card">
+              <h2>Valor Final Bruto</h2>
+              <p>VALOR</p>
+            </div>
+            <div className="card"><h2>Alíquota do IR</h2>
+              <p>VALOR</p></div>
+            <div className="card"><h2>Valor Pago em IR</h2>
+              <p>VALOR</p></div>
+            <div className="card"><h2>Valor Final Líquido</h2>
+              <p>VALOR</p></div>
+            <div className="card"><h2>Valor Total Investido</h2>
+              <p>VALOR</p></div>
+            <div className="card"><h2>Ganho Líquido</h2>
+              <p>VALOR</p></div>
+          </div>
         </div>
 
       </div>
