@@ -1,106 +1,103 @@
-$primary-color: #ED8E53;
+$primary-color: #ed8e53;
 $secondary-color: rgb(240, 240, 240);
 
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-.App{
+.App {
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: $secondary-color;
     height: 100vh;
 
-    .title-page{
+    .title-page {
         margin: 20px;
     }
 
-    .BOX{
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
-    margin-top: 30px;
+    .BOX {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        margin-top: 30px;
+        position: relative;
     }
-
 }
 
-.simulator{
+.simulator {
     display: flex;
     flex-direction: column;
     width: auto;
 
-    h1{
+    h1 {
         margin-bottom: 30px;
     }
 
-    .box-simulator{
+    .box-simulator {
         display: flex;
         margin-bottom: 25px;
         gap: 40px;
-        
 
-        .label-rendimento{
+        .label-rendimento {
             display: flex;
             justify-content: space-between;
             margin-bottom: 10px;
         }
 
-        .option-box-1 , .option-box-2{
-            
-            input{
-            display: none;
+        .option-box-1,
+        .option-box-2 {
+            input {
+                display: none;
 
-                &:checked + label{
+                &:checked + label {
                     background-color: $primary-color;
                     color: white;
-                    width: 80%;
+                    width: 100%;
                 }
 
-                &:checked + label::before{
-                    content: '✔︎';
+                &:checked + label::before {
+                    content: "✔︎";
                     margin-right: 3px;
                 }
-
             }
 
             display: flex;
 
-            label{
+            label {
                 background-color: transparent;
                 display: flex;
                 flex-direction: row;
                 justify-content: center;
                 align-items: center;
-                width: 4vw;
+                width: 12vw;
                 height: 45px;
                 border: 1px solid black;
                 cursor: pointer;
-                transition: .2s ease;
+                transition: 0.2s ease;
 
-                &:hover{
+                &:hover {
                     color: $primary-color;
                 }
-
             }
 
-            #bru{
+            #bru {
                 border-top-left-radius: 5px;
                 border-bottom-left-radius: 5px;
             }
 
-            #liq{
+            #liq {
                 border-top-right-radius: 5px;
                 border-bottom-right-radius: 5px;
             }
 
-            #pr{
+            #pr {
                 border-top-left-radius: 5px;
                 border-bottom-left-radius: 5px;
             }
 
-            #fix{
+            #fix {
                 border-top-right-radius: 5px;
                 border-bottom-right-radius: 5px;
             }
@@ -109,9 +106,9 @@ $secondary-color: rgb(240, 240, 240);
             margin-bottom: 30px;
         }
 
-        .col-1{
-            width: 13vw;
-            input[type="number"]{
+        .col-1 {
+            width: 17vw;
+            input[type="number"] {
                 margin-bottom: 10px;
                 border: none;
                 border-bottom: 1px solid black;
@@ -121,16 +118,16 @@ $secondary-color: rgb(240, 240, 240);
                 display: block;
                 width: 100%;
 
-                &::placeholder{
+                &::placeholder {
                     margin: 0px;
                     padding: 0px;
                 }
-            } 
+            }
         }
 
-        .col-2{
-            width: 13vw;
-            input[type="number"]{
+        .col-2 {
+            width: 17vw;
+            input[type="number"] {
                 margin-bottom: 10px;
                 border: none;
                 border-bottom: 1px solid black;
@@ -140,28 +137,26 @@ $secondary-color: rgb(240, 240, 240);
                 width: 100%;
             }
         }
-
     }
 
-    input[type=number]::-webkit-inner-spin-button { 
+    input[type="number"]::-webkit-inner-spin-button {
         -webkit-appearance: none;
-        
     }
-    input[type=number] { 
-       -moz-appearance: textfield;
-       appearance: textfield;
+    input[type="number"] {
+        -moz-appearance: textfield;
+        appearance: textfield;
     }
 
     input:focus {
-    box-shadow: 0 0 0 0;
-    outline: 0;
-}
+        box-shadow: 0 0 0 0;
+        outline: 0;
+    }
 
-    .btns{  
+    .btns {
         display: flex;
         gap: 10px;
 
-        button{
+        button {
             justify-self: center;
             width: 100%;
             padding: 15px;
@@ -171,46 +166,55 @@ $secondary-color: rgb(240, 240, 240);
             font-weight: bold;
         }
 
-        .clean{
+        .clean {
             background-color: transparent;
             border: 1px solid black;
-            transition: .2s ease;
+            transition: 0.2s ease;
 
-            &:hover{
+            &:hover {
                 border: 1px solid $primary-color;
                 color: $primary-color;
             }
         }
 
-        .sim{
+        .sim {
             background-color: $primary-color;
-            transition: .2s ease;
+            transition: 0.2s ease;
 
-            &:hover{
+            &:hover {
                 background-color: rgb(255, 140, 74);
             }
-
         }
 
+        .simClosed {
+            background-color: grey;
+            color: black;
+        }
     }
 }
 
-.Resultados{
+.hidden{
+    visibility: hidden;
+}
+
+.Resultados {
     width: 40vw;
     border-radius: 10px;
     box-sizing: border-box;
     align-items: center;
     display: flex;
     flex-direction: column;
+    animation: results 1.5s ease forwards;
+    opacity: 0;
 
-    .cards{
+    .cards {
         margin-top: 30px;
         display: flex;
         flex-wrap: wrap;
         gap: 20px;
         justify-content: center;
 
-        .card{
+        .card {
             background-color: $secondary-color;
             width: 200px;
             height: 90px;
@@ -221,13 +225,64 @@ $secondary-color: rgb(240, 240, 240);
             align-items: center;
             gap: 20px;
 
-            h2{
+            h2 {
                 font-size: 18px;
             }
+        }
+    }
+}
 
+@keyframes results {
+    from {opacity: 0}
+    to {opacity: 1}
+  }
+
+@media (max-width: 1080px) {
+    .App {
+        overflow: auto;
+
+        .title-page {
+            text-align: center;
         }
 
+        .BOX {
+            flex-direction: column;
+            align-items: center;
+
+            .box-simulator {
+                flex-direction: column;
+                width: 50vw;
+
+                .col-1 {
+                    width: 100%;
+
+                    .option-box-1 {
+                        label {
+                            width: 100%;
+                        }
+                    }
+                }
+
+                .col-2 {
+                    width: 100%;
+
+                    .option-box-2 {
+                        label {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            .btns {
+                flex-direction: column;
+            }
+        }
+
+        .Resultados {
+            text-align: center;
+            width: 100%;
+            margin-bottom: 50px;
+        }
     }
-
-
 }

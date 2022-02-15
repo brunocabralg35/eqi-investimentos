@@ -33,6 +33,7 @@
           flex-direction: row;
   gap: 40px;
   margin-top: 30px;
+  position: relative;
 }
 
 .simulator {
@@ -68,7 +69,8 @@
   margin-bottom: 10px;
 }
 
-.simulator .box-simulator .option-box-1, .simulator .box-simulator .option-box-2 {
+.simulator .box-simulator .option-box-1,
+.simulator .box-simulator .option-box-2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -76,22 +78,26 @@
   margin-bottom: 30px;
 }
 
-.simulator .box-simulator .option-box-1 input, .simulator .box-simulator .option-box-2 input {
+.simulator .box-simulator .option-box-1 input,
+.simulator .box-simulator .option-box-2 input {
   display: none;
 }
 
-.simulator .box-simulator .option-box-1 input:checked + label, .simulator .box-simulator .option-box-2 input:checked + label {
-  background-color: #ED8E53;
+.simulator .box-simulator .option-box-1 input:checked + label,
+.simulator .box-simulator .option-box-2 input:checked + label {
+  background-color: #ed8e53;
   color: white;
-  width: 80%;
+  width: 100%;
 }
 
-.simulator .box-simulator .option-box-1 input:checked + label::before, .simulator .box-simulator .option-box-2 input:checked + label::before {
-  content: '✔︎';
+.simulator .box-simulator .option-box-1 input:checked + label::before,
+.simulator .box-simulator .option-box-2 input:checked + label::before {
+  content: "✔︎";
   margin-right: 3px;
 }
 
-.simulator .box-simulator .option-box-1 label, .simulator .box-simulator .option-box-2 label {
+.simulator .box-simulator .option-box-1 label,
+.simulator .box-simulator .option-box-2 label {
   background-color: transparent;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -106,40 +112,45 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 4vw;
+  width: 12vw;
   height: 45px;
   border: 1px solid black;
   cursor: pointer;
-  -webkit-transition: .2s ease;
-  transition: .2s ease;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
 }
 
-.simulator .box-simulator .option-box-1 label:hover, .simulator .box-simulator .option-box-2 label:hover {
-  color: #ED8E53;
+.simulator .box-simulator .option-box-1 label:hover,
+.simulator .box-simulator .option-box-2 label:hover {
+  color: #ed8e53;
 }
 
-.simulator .box-simulator .option-box-1 #bru, .simulator .box-simulator .option-box-2 #bru {
+.simulator .box-simulator .option-box-1 #bru,
+.simulator .box-simulator .option-box-2 #bru {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
 
-.simulator .box-simulator .option-box-1 #liq, .simulator .box-simulator .option-box-2 #liq {
+.simulator .box-simulator .option-box-1 #liq,
+.simulator .box-simulator .option-box-2 #liq {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
 
-.simulator .box-simulator .option-box-1 #pr, .simulator .box-simulator .option-box-2 #pr {
+.simulator .box-simulator .option-box-1 #pr,
+.simulator .box-simulator .option-box-2 #pr {
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
 }
 
-.simulator .box-simulator .option-box-1 #fix, .simulator .box-simulator .option-box-2 #fix {
+.simulator .box-simulator .option-box-1 #fix,
+.simulator .box-simulator .option-box-2 #fix {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
 
 .simulator .box-simulator .col-1 {
-  width: 13vw;
+  width: 17vw;
 }
 
 .simulator .box-simulator .col-1 input[type="number"] {
@@ -173,7 +184,7 @@
 }
 
 .simulator .box-simulator .col-2 {
-  width: 13vw;
+  width: 17vw;
 }
 
 .simulator .box-simulator .col-2 input[type="number"] {
@@ -186,11 +197,11 @@
   width: 100%;
 }
 
-.simulator input[type=number]::-webkit-inner-spin-button {
+.simulator input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
-.simulator input[type=number] {
+.simulator input[type="number"] {
   -moz-appearance: textfield;
   -webkit-appearance: textfield;
           appearance: textfield;
@@ -223,23 +234,32 @@
 .simulator .btns .clean {
   background-color: transparent;
   border: 1px solid black;
-  -webkit-transition: .2s ease;
-  transition: .2s ease;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
 }
 
 .simulator .btns .clean:hover {
-  border: 1px solid #ED8E53;
-  color: #ED8E53;
+  border: 1px solid #ed8e53;
+  color: #ed8e53;
 }
 
 .simulator .btns .sim {
-  background-color: #ED8E53;
-  -webkit-transition: .2s ease;
-  transition: .2s ease;
+  background-color: #ed8e53;
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
 }
 
 .simulator .btns .sim:hover {
   background-color: #ff8c4a;
+}
+
+.simulator .btns .simClosed {
+  background-color: grey;
+  color: black;
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 .Resultados {
@@ -257,6 +277,9 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-animation: results 1.5s ease forwards;
+          animation: results 1.5s ease forwards;
+  opacity: 0;
 }
 
 .Resultados .cards {
@@ -296,5 +319,71 @@
 
 .Resultados .cards .card h2 {
   font-size: 18px;
+}
+
+@-webkit-keyframes results {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes results {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1080px) {
+  .App {
+    overflow: auto;
+  }
+  .App .title-page {
+    text-align: center;
+  }
+  .App .BOX {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .App .BOX .box-simulator {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 50vw;
+  }
+  .App .BOX .box-simulator .col-1 {
+    width: 100%;
+  }
+  .App .BOX .box-simulator .col-1 .option-box-1 label {
+    width: 100%;
+  }
+  .App .BOX .box-simulator .col-2 {
+    width: 100%;
+  }
+  .App .BOX .box-simulator .col-2 .option-box-2 label {
+    width: 100%;
+  }
+  .App .BOX .btns {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .App .Resultados {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 50px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
