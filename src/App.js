@@ -31,7 +31,7 @@ function App() {
       });
   }
 
-  //Variavel para verificar inputs
+  //Variavel para verificar inputs & button
   const [isFilled, setIsFilled] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
 
@@ -57,6 +57,9 @@ function App() {
   useEffect(() => {
     if ((Aporte !== '') && (AporteM !== '') && (Prazo !== '') && (Rentabilidade !== '')) {
       setIsFilled(true);
+    }
+    else {
+      setIsFilled(false);
     }
   }, [Aporte, AporteM, Rentabilidade, Prazo])
 
@@ -129,7 +132,6 @@ function App() {
           <div className="btns">
             <button className="clean" onClick={cleanInput}>Limpar campos</button>
             {(isFilled) ? <button className="sim" onClick={getData}>Simular</button> : <button className="simClosed" onClick={() => { alert('Preencha todos os dados!'); }}>Simular</button>}
-
           </div>
         </div>
 
@@ -151,7 +153,7 @@ function App() {
             <div className="card"><h2>Ganho Líquido</h2>
               <p>R$ {GL}</p></div>
           </div>
-        </div> : <span></span>  
+        </div> : <span></span>
         }
 
       </div>
