@@ -11,13 +11,13 @@ Você vai precisar ter instalado em sua máquina as seguintes ferramentas:
 ### 🎲 Rodando o desafio
 
 ```bash
-# Clone este repositório
-$ git clone https://github.com/brunocabralg35/eqi-investimentos
-
-# Acesse pasta desafio-fake-api e instale as dependências
+# Clone o repositório da API FAKE e instale as dependências
 $ npm install
 $ npx json-server db.json
 # O servidor inciará na porta:3000 - acesse <http://localhost:3000>
+
+# Clone este repositório
+$ git clone https://github.com/brunocabralg35/eqi-investimentos
 
 # Acesse pasta eqi-investimentos
 $ npm install
