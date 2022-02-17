@@ -36,8 +36,8 @@ As seguintes ferramentas foram usadas na construção do projeto:
 ---
 
  <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/80435872?v=4" width="100px;" alt=""/>
- <br />
- <sub><b>Bruno Cabral</b></sub>🚀
+
+Bruno Cabral 🚀
 
 Feito com ❤️ por Bruno Cabral ✌️ Entre em contato!
 
